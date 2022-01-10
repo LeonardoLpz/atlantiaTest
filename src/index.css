@@ -1,1 +1,9 @@
-@import url();
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap');
+@import url('./styles/colors.css');
+@import url('./styles/typos.css');
+
+body{
+    margin:0;
+}

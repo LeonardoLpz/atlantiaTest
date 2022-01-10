@@ -7,10 +7,8 @@ import ProductTable from './ProductTable'
 function App() {
   return (
     <div className="App">
-      <HeaderApp ></HeaderApp>
-      <PresenceShare></PresenceShare>
+      <HeaderApp logo={logo}></HeaderApp>
       <PriceEvolution></PriceEvolution>
-      <ProductTable></ProductTable>
     </div>
   );
 }

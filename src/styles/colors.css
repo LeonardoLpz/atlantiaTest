@@ -1,0 +1,85 @@
+:root{
+    --Blue-100: #B3D4FF;
+    --Blue-200: #80B7FF;
+    --Blue-300: #4D9AFF;
+    --Blue-400: #1A7DFF;
+    --Blue-500: #006FFF;
+    --Blue-600: #0064E6;
+    --Blue-700: #0059CC;
+    --Blue-800: #004EB3;
+    --Blue-900: #004399;
+
+    --BlueDark-100: #8193A4;
+    --BlueDark-200: #4E6780;
+    --BlueDark-300: #35516D;
+    --BlueDark-400: #1B3C5B;
+    --BlueDark-500: #022649;
+    --BlueDark-600: #021E3A;
+    --BlueDark-700: #011B33;
+    --BlueDark-800: #011B33;
+    --BlueDark-900: #01172C;
+
+    --Orange-100: #FFAF66;
+    --Orange-200: #FFA24D;
+    --Orange-300: #FF9533;
+    --Orange-400: #FF871A;
+    --Orange-500: #FF7A00;
+    --Orange-600: #E66E00;
+    --Orange-700: #CC6200;
+    --Orange-800: #B35500;
+    --Orange-900: #994900;
+
+    --Pita-100: #D6738E;
+    --Pita-200: #E67A9D;
+    --Pita-300: #DE4D7C;
+    --Pita-400: #DA376B;
+    --Pita-500: #D6215B;
+    --Pita-600: #C11E52;
+    --Pita-700: #AB1A49;
+    --Pita-800: #961740;
+    --Pita-900: #801437;
+
+    --Yellow-100: #FFDAA4;
+    --Yellow-200: #FFD291;
+    --Yellow-300: #FFC36D;
+    --Yellow-400: #FFBC5A;
+    --Yellow-500: #FFB448;
+    --Yellow-600: #E6A241;
+    --Yellow-700: #CC903A;
+    --Yellow-800: #B37E32;
+    --Yellow-900: #996C2B;
+
+    --Purple-100: #C8ACE0;
+    --Purple-200: #AC83D1;
+    --Purple-300: #9159C1;
+    --Purple-400: #8345BA;
+    --Purple-500: #7530B2;
+    --Purple-600: #692BA0;
+    --Purple-700: #5E268E;
+    --Purple-800: #52227D;
+    --Purple-900: #461D6B;
+
+    --Aqua-100: #BDE9DF;
+    --Aqua-200: #91DBCA;
+    --Aqua-300: #65CDB4;
+    --Aqua-400: #39BE9F;
+    --Aqua-500: #23B794;
+    --Aqua-600: #20A585;
+    --Aqua-700: #1C9276;
+    --Aqua-800: #198068;
+    --Aqua-900: #156E59;
+
+    --Gray-100: #E9E9E9;
+    --Gray-200: #D3D3D3;
+    --Gray-300: #BCBCBD;
+    --Gray-400: #A6A6A7;
+    --Gray-500: #909091;
+    --Gray-600: #828283;
+    --Gray-700: #737374;
+    --Gray-800: #656566;
+    --Gray-900: #565657;
+
+    --white:#FFFFFF;
+    --black: #000000;
+    --background: #F0F6FF;
+}

@@ -1,0 +1,8 @@
+.header-app{
+    background-color:var(--Blue-500);
+    display:grid;
+    padding:4px 30px;
+}
+.header-app img{
+    width:150px;
+}
