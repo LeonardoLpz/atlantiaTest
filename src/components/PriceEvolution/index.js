@@ -1,47 +1,88 @@
 import React, { useEffect, useState } from 'react';
 import Chart from "react-apexcharts";
-import useFetch from './utils/useFetch';
-const priceUrl = 'https://atlantia-dev-test.herokuapp.com/api/price-evolution-chart/'
+import './style.css'
+const url = 'https://atlantia-dev-test.herokuapp.com/api/price-evolution-chart/'
+const formatDate = (date) => {
+  let newDate = new Date(date).toString()
+  newDate = newDate.slice(4,10)
+  return newDate
+}
 const PriceEvolution = () => {
     const [ options, setOptions] = useState({
         chart: {
-          id: "price-evolution-bar",
-          toolbar:{show:false}
+          id: "",
+          toolbar:{show:false},
+          redrawOnParentResize: false,
+          background: '#fff'
         },
         xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-        }
+          categories: []
+        },
+        stroke: {
+          width: 5,
+          curve: 'smooth'
+        },
+        responsive: [{
+          breakpoint: 900,
+          chart: {
+            height: '400px'
+        },
+          options: {},
+      }]
       });
-      const [series, setSeries] = useState([{
-        name: "series-1",
-        data: [50, 20, 35, 44, 99, 60, 70, 91]
-      },{
-        name: "series-1",
-        data: [30, 40, 45, 50, 49, 60, 70, 91]
-      }])
-
-    const [chartData,loading] =  useFetch( priceUrl)
-
-    /*  
-    {
-        "sku": "039430430493093",
-        "name": "Cerveza XX Ambar 325 ml",
-        "price": 22,
-        "dateExtraction": "10/04/21"
+    const [series, setSeries] = useState([])
+    const [data, setData] = useState([])
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(url)
+      const json = await response.json()
+      function skus(data) {
+        let conteo = {};
+        data.forEach(({sku}) => {
+          conteo[sku] = conteo[sku]+1 || 1 ;
+        });
+        let sku = Object.keys(conteo).map( e=>(e));
+        let items = []
+        sku.forEach( key => {
+          items.push( data.filter( e => e.sku === key))
+        })
+        items.forEach(item => {
+          let seriesData = []
+          let seriesName = ""
+          let seriesObjeto = {}
+          let seriesDates = []
+          item.forEach(element => {
+            seriesName = element.name
+            seriesData.push(element.price)
+            seriesDates.push(formatDate(element.dateExtraction))
+          })
+          seriesObjeto = {
+            name: seriesName,
+            data: seriesData
+          }
+          setOptions({...options, xaxis: {categories:seriesDates}})
+          let objeto = series => [...series, seriesObjeto]
+          setSeries(objeto)
+        })
+        return items;
+      }
+      setData(skus(json))
     }
-    */
+    fetchData()
+  }, [])
+  
     return (
-        <div className="app">
-          <div className="row">
-            <div className="mixed-chart">
+      <div>
+        <p className='title-secciones table-title'>Price Evolution</p>
+        <div className="price-evolution">
               <Chart
                 options={options}
                 series={series}
-                width="100%"
+              
               />
-            </div>
-          </div>
         </div>
+      </div>
+        
       );
 }
 

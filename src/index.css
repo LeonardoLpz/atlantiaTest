@@ -6,4 +6,29 @@
 
 body{
     margin:0;
+    background-color:var(--background)
+}
+.charts-container{
+    display:grid;
+    grid-row-gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 28px;
+    max-width: 1384px;
+    margin: auto;
+
+}
+.title-general{
+    margin:28px;
+    color:var(--blueDark--900);
+    max-width: 1384px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (min-width:900px) {
+    .charts-container{
+        grid-auto-flow: column;
+        grid-template-columns: 60% 40%;
+        grid-column-gap: 20px;
+        height:600px;
+    }
 }

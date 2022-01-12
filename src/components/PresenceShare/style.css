@@ -1,0 +1,16 @@
+.presence-share{
+    background-color: var(--white);
+    max-width:860px;
+    margin:auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding:86px 25px;
+    box-sizing: border-box;
+}
+@media screen and (min-width:900px){
+    .presence-share{
+        max-width:500px;
+        height:407px;
+    }
+}

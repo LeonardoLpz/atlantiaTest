@@ -1,0 +1,15 @@
+.price-evolution{
+    max-width: 863px;
+    min-width:380px;
+}
+
+@media screen and (min-width:900px) {
+    .price-evolution{
+        height:407px;
+        box-sizing:border-box;
+
+    }
+    #price-evolution-bar{
+        height:407px;
+    }
+}

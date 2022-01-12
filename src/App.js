@@ -4,11 +4,18 @@ import PresenceShare from './PresenceShare'
 import PriceEvolution from './PriceEvolution'
 import ProductTable from './ProductTable'
 
+
 function App() {
   return (
     <div className="App">
+      
       <HeaderApp logo={logo}></HeaderApp>
-      <PriceEvolution></PriceEvolution>
+      <p className='title-principal title-general'>General Perfomance Analysis</p>
+      <div className='charts-container'>
+        <PriceEvolution></PriceEvolution>
+        <PresenceShare></PresenceShare>
+      </div>
+      <ProductTable></ProductTable>
     </div>
   );
 }
